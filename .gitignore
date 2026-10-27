@@ -1,0 +1,95 @@
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# ---------------------------------------------------------------------------
+# Build / packaging output (the EXE is published as a GitHub Release, not as
+# source). The PyInstaller .spec stays in the repo as build documentation.
+# ---------------------------------------------------------------------------
+build/
+dist/
+release/
+*.spec.bak
+*.manifest
+
+# ---------------------------------------------------------------------------
+# Local school data - NEVER commit real student information.
+# The app stores its database outside the repository, but these rules protect
+# against accidental copies, backups and exports.
+# ---------------------------------------------------------------------------
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+backups/
+exports/
+logs/
+*.log
+sample_data/
+
+# Excel / CSV / PDF files produced by the app (exports, imported sheets,
+# report PDFs). The app generates its own import templates at runtime, so no
+# legitimate template needs to live in the repository.
+*.xlsx
+*.xls
+*.csv
+*.pdf
+
+# Screenshots may contain student names or marks.
+screenshots/
+shots*/
+*.shots.png
+
+# ---------------------------------------------------------------------------
+# Secrets and private local configuration
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.*
+config.local.*
+*.local
+
+# ---------------------------------------------------------------------------
+# Temporary / diagnostic files
+# ---------------------------------------------------------------------------
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+*.rej
+debug_*.py
+_scratch/
+scratch_*.py
+
+# ---------------------------------------------------------------------------
+# OS / editor
+# ---------------------------------------------------------------------------
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*~
